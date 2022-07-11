@@ -1,0 +1,2048 @@
+/*========================
+              Body and Global
+          ========================*/
+
+/*
+
+           Cool Colors
+
+
+
+           
+           background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  */
+@media only screen and (min-width: 481px) {
+  .ulTop a:hover {
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+    color: #ffffff;
+  }
+
+  @-webkit-keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+        0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+        0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+    }
+  }
+
+  @-moz-keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+        0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+        0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+    }
+  }
+
+  /*glow*/
+
+  @keyframes neon3 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+        0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+        0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+    }
+  }
+
+  .ani5 {
+    color: rgb(255, 7, 58);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+      0 0 20px rgb(255, 7, 58), 0 0 35px rgb(255, 7, 58),
+      0 0 40px rgb(255, 7, 58), 0 0 50px rgb(255, 7, 58),
+      0 0 75px rgb(255, 7, 58);
+  }
+  /* 
+  Neon Animation. Really Cool, but uneeded and actually slows down scrolling?
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+        0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+        0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+    } }*/
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  /* font-family: "Josefin Sans", sans-serif; */
+  /* color: white; */
+  font-family: "a_attack_graffitiregular";
+}
+.Bod {
+  display: none;
+  transition: 2s ease;
+  overflow: hidden;
+}
+.body {
+  overflow: hidden;
+  background-color: black;
+}
+html {
+  font-size: 2vw;
+}
+
+/*========================
+              ScrollBar
+          ========================*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(156, 141, 1);
+}
+
+/*-------------------------
+         Fonts  
+--------------------------*/
+@font-face {
+  font-family: "a_attack_graffitiregular";
+  src: url("Styles/aattackgraffiti-webfont.woff2") format("woff2"),
+    url("Styles/aattackgraffiti-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "coolregular";
+  src: url("Styles/dastreets-8lmz-webfont.woff2") format("woff2"),
+    url("Styles/dastreets-8lmz-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.fa-bars {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  /* This is weird, the bars were causing a padding like area at the top of the page, and doing this makes it go away */
+}
+
+/* -----------------------------------
+              Load Screen
+------------------------------------- */
+
+.begin button,
+.its,
+.your,
+#favor,
+.fav2,
+#uncle,
+#cuzzo {
+  position: absolute;
+  animation-fill-mode: forwards;
+  color: yellow;
+}
+
+.begin {
+  animation: pass2 0.1s;
+  animation-delay: 5s;
+  position: relative;
+  text-align: center;
+}
+.begin button {
+  background-color: black;
+  padding: 5px 10px;
+  left: 25px;
+}
+.begin button i {
+  transform: rotate(0deg);
+}
+
+.its {
+  transform: translate(-400px);
+  animation: its 4s;
+  animation-delay: 0.7s;
+  font-size: 0vw;
+}
+.your {
+  transform: translate(1000px);
+  animation: your 4s;
+  animation-delay: 1s;
+}
+.your2,
+.its2 {
+  animation-delay: 4s;
+}
+
+#favor {
+  transform: translate(-2000px, 400px);
+  animation: favorite 8s;
+  animation-delay: 1.2s;
+  font-size: 10vw;
+}
+
+#uncle,
+#cuzzo {
+  transform: translate(-300px, -350px);
+  font-size: 15vw;
+  animation: unk 2.2s;
+}
+#uncle {
+  animation-delay: 3s;
+}
+#cuzzo {
+  animation-delay: 6s;
+}
+
+@keyframes unk {
+  50% {
+    transform: translate(-300px, 250px);
+  }
+  100% {
+    transform: translate(-300px, 1500px);
+  }
+}
+@keyframes fav2 {
+  50% {
+    transform: translate(350px, 300px);
+  }
+
+  100% {
+    transform: translate(-350px, 1500px);
+  }
+}
+
+@keyframes favorite {
+  15% {
+    transform: translate(-350px, 300px);
+  }
+
+  40% {
+    transform: translate(-350px, 1500px);
+  }
+  74% {
+  }
+  65% {
+    transform: translate(-350px, 300px);
+  }
+
+  100% {
+    transform: translate(-350px, 1500px);
+  }
+}
+@keyframes your {
+  50% {
+    font-size: 10vw;
+    transform: translate(0, 100px);
+  }
+  100% {
+    transform: translate(0, 1500px);
+  }
+}
+@keyframes its {
+  50% {
+    transform: translate(-400px, 100px);
+    font-size: 10vw;
+  }
+  100% {
+    transform: translate(0, 1500px);
+  }
+}
+
+/* -----------------------------------
+             Shining Headlines
+------------------------------------- */
+@-webkit-keyframes shine {
+  0%,
+  10% {
+    background-position: -100%;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+/* @-webkit-keyframes shine2 {
+  0% {
+    background-position: -100%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+} */
+@-webkit-keyframes shine2 {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 100000px;
+  }
+}
+.ani {
+  background: #222 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 450px;
+  color: rgba(124, 112, 0, 0.5);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.ani2,
+.ani3 {
+  background: #222 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 220px;
+  color: rgba(192, 163, 0, 0.5);
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine2;
+  -webkit-animation-duration: 3.4s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.ani5 {
+  color: #fff;
+
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+.ani2 {
+  text-align: center;
+}
+.ani3 {
+  filter: drop-shadow(20px 20px 20px #9c8d01);
+  color: rgba(124, 112, 0, 0.5);
+  -webkit-animation-duration: 4s;
+  -webkit-background-size: 245px;
+}
+.ani4 {
+  -webkit-background-size: 300px 720px;
+}
+
+/*=================================================
+               Heading Title
+==================================================*/
+.body .mainheading {
+  position: absolute;
+  letter-spacing: 15px;
+  top: 20vw;
+  z-index: 1;
+  font-size: 9vw;
+  margin: auto auto;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+.conservative {
+  font-size: 7.5vw;
+  color: rgb(80, 72, 0);
+  font-family: "coolregular";
+  /* font-size: 6vw; */
+  letter-spacing: 25px;
+  filter: brightness(130%);
+}
+/*======================
+                Top/Header for Index
+          =======================*/
+
+/*
+               stupid invert scales
+                          */
+/* 481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.*/
+.fix {
+  background-color: black;
+  padding: -5px;
+  height: 100vh;
+}
+.module {
+  width: 100%;
+
+  height: 100%;
+
+  place-items: center;
+  color: #ff43ea;
+  position: relative;
+  border: solid black;
+}
+.module::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-image: url(hoodbackground.png);
+  background-size: cover;
+}
+.module-inside {
+  backdrop-filter: invert(0.4);
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  border: solid grey;
+}
+/* .invert::before {
+
+} */
+
+.mobileimage {
+  display: none;
+}
+
+header {
+  height: 10%;
+  top: 0;
+  width: 100%;
+  padding-top: 2vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.fol {
+  animation-delay: 0.5s;
+}
+.mer {
+  animation-delay: 1s;
+}
+.wat {
+  animation-delay: 1.5s;
+}
+.abo {
+  animation-delay: 2s;
+}
+
+.ulTop {
+  display: flex;
+  font-size: 1.7vw;
+  justify-content: space-evenly;
+}
+.vip {
+  letter-spacing: 3px;
+}
+
+.ulTop li a {
+  text-decoration: none;
+
+  transition: 0.7s;
+  padding: 5px;
+  position: absolute;
+  cursor: pointer;
+}
+.ulTop li {
+}
+.ulTop li a:before {
+  content: "";
+  position: absolute;
+  width: 1%;
+  height: 0;
+  bottom: 0;
+  left: 10px;
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.ulTop li:hover > .ani:before {
+  visibility: visible;
+  height: 2px;
+  width: 80%;
+}
+.mer {
+  letter-spacing: 8px;
+}
+/*===========================================
+       Follow Me/With a little bit of the form
+  ===========================================*/
+.followme,
+.form {
+  height: 100vw;
+  text-align: right;
+  background-color: white;
+  overflow: hidden;
+  right: 200%;
+  background-color: black;
+  transition: 1.1s;
+  position: absolute;
+}
+.followYoutube {
+  display: none;
+}
+.followme {
+  z-index: 2;
+}
+.form {
+  z-index: 3;
+}
+.followme p {
+  font-size: 3vw;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 8px;
+}
+.followp1 {
+  width: 90%;
+  font-size: 3vw;
+  color: white;
+  text-align: center;
+  margin: 3vw auto 0;
+}
+.followp2 {
+  margin: 250px auto 0;
+  width: 75%;
+  text-align: center;
+}
+.xdiv {
+  position: relative;
+}
+.fas1,
+.fas2 {
+  color: yellow;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 3;
+  font-size: 3vw;
+  cursor: pointer;
+}
+.x:hover > .fa-times {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.yu .youtuber {
+  transition: 1.5s;
+  font-size: 15.5vw;
+  transform: translate(-30vw, -25vw);
+}
+@media only screen and (max-width: 1600px) {
+  .yu .youtuber {
+    transform: translate(-30vw, -30vw);
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .yu .youtuber {
+    transform: translate(-30vw, -36vw);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -70%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -150%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -200%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -300%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -400%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .yu .youtuber {
+    transform: translate(-20vw, -33vw);
+  }
+  .body .iconsTop {
+    transform: translate(-10%, -500%);
+  }
+  .body .iconsTop .three .insty,
+  .body .iconsTop .two .twit,
+  .body .iconsTop .feces::before {
+    font-size: 8vw;
+  }
+}
+
+.three .insty {
+  font-size: 4vw;
+  transform: translate(400%);
+}
+.two .twit {
+  font-size: 4vw;
+  transform: translate(300%);
+}
+.iconsTop .feces::before {
+  font-size: 4vw;
+}
+.dipshit {
+  transform: translate(300%);
+}
+.followYoutube {
+  display: none;
+}
+
+/*===========================================
+      Contact form
+  ===========================================*/
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 3vw;
+  z-index: 3;
+  transition: 1s ease;
+  right: 200%;
+  overflow: hidden;
+}
+.form form .ani {
+  letter-spacing: 10px;
+  line-height: 3.5vw;
+  font-size: 2vw;
+  box-shadow: none;
+  filter: none;
+  background-color: black;
+}
+form {
+  transition: 0.1s;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  margin-top: 3vw;
+  position: relative;
+  border: solid grey;
+  padding: 3% 5%;
+  border-radius: 0.5vw;
+  box-shadow: 0 0 4px 2px gold;
+  border-width: 10px;
+  /* filter: drop-shadow(rgb(156, 141, 1) 8px 10px 5px); */
+}
+
+.img123 {
+  position: absolute;
+  width: 80%;
+  left: -500px;
+  bottom: -310px;
+  z-index: -1;
+  filter: brightness(30%);
+}
+.gen {
+  width: 45%;
+}
+input {
+  border-radius: 0.25vw;
+  border: solid grey;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: block;
+  font-size: 2vw;
+  padding: 5px;
+  cursor: pointer;
+  margin: 1vw auto;
+}
+.send {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.send:hover {
+  background-color: black;
+  color: white;
+}
+/*=======================
+       Top Icons
+  =======================*/
+.iconImgDiv {
+  position: relative;
+  z-index: 2;
+}
+.iconsTop {
+  z-index: 2;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  font-size: 2vw;
+  color: white;
+}
+.fa-instagram {
+  color: white;
+}
+.iconsTop div:hover > a .ico {
+  transform: rotate(360deg);
+}
+
+/*=======================
+                Body
+        =======================*/
+.test {
+  width: 150%;
+}
+.test1 {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  overflow: hidden;
+  filter: brightness(20%);
+  z-index: -1;
+}
+.test2img {
+  display: none;
+}
+.bodytitle {
+  border: solid rgb(156, 141, 1);
+}
+
+.bodytitle,
+.bodytitle span {
+  text-align: center;
+  position: relative;
+
+  width: 100%;
+  font-size: 6vw;
+  font-family: "a_attack_graffitiregular";
+  color: yellow;
+  overflow: hidden;
+}
+
+.first {
+  padding: 30px;
+  font-size: 8vw;
+  background-color: #fdb813;
+  background-image: linear-gradient(315deg, #eeff00 0%, #e43326 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bodytitle p {
+  color: white;
+  text-align: center;
+  margin-top: 15%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5vw;
+  line-height: 10vw;
+  width: 100%;
+  letter-spacing: 5px;
+}
+.break {
+  border-top: solid yellow;
+  width: 45%;
+  margin: auto auto 5vw;
+}
+.dos {
+  margin: 7vw auto;
+  width: 70%;
+}
+
+/*=======================
+       Video
+  =======================*/
+.viddiv {
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+
+  height: fit-content;
+}
+.viddiv .latest {
+  font-size: 6vw;
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  overflow: visible;
+  margin: 10% auto;
+  letter-spacing: 15px;
+  padding: 3%;
+  border: double;
+  border-color: #fdb813;
+  transition: 1s;
+  box-shadow: 20px 20px rgba(255, 255, 255, 0.15);
+}
+
+.viddiv .latest:hover {
+  box-shadow: 15px 15px rgb(129, 128, 128);
+}
+
+.streamline {
+  width: 70%;
+}
+.video {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  justify-content: center;
+}
+.another1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.viddiv .pops {
+  width: 75%;
+  margin: 7vw auto;
+  letter-spacing: 12px;
+  font-size: 7vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 20px 20px rgba(255, 255, 255, 0.15);
+  transition: 1s;
+  border: double;
+  border-color: #fdb813;
+  padding: 1%;
+}
+
+.viddiv .pops:hover {
+  box-shadow: 15px 15px rgb(129, 128, 128);
+}
+.viddiv .break {
+  width: 57%;
+}
+
+.pops span {
+  opacity: 0;
+}
+iframe {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+}
+.testparent {
+  width: 100%;
+}
+.testparent2 {
+  width: 45%;
+}
+.viddiv .ani2 span {
+  opacity: 0;
+}
+
+.watchbtn {
+  margin-top: 12vw;
+  background-color: white;
+  color: black;
+  border-radius: 0.25vw;
+  font-size: 3vw;
+  padding: 10px;
+}
+.watchbtn:hover {
+  color: white;
+  background-color: black;
+  border: yellow solid;
+  transition: 1s ease-out;
+  cursor: pointer;
+}
+.watchbtn i {
+  transition: 0.7s ease-out;
+  transform: rotate(0deg);
+}
+
+/*=====================
+     This ^^^^^ is where I stopped cleaning code
+=====================*/
+/*====================================================================
+                                Carosel
+===================================================================*/
+.meet {
+  display: flex;
+  font-size: 6vw;
+  text-align: center;
+  margin: 0 auto 5vw;
+  justify-content: center;
+  letter-spacing: 12px;
+  transition: 1s;
+  border: double;
+  border-color: #fdb813;
+  width: 80%;
+  box-shadow: 20px 20px rgba(255, 255, 255, 0.15);
+  padding: 1%;
+}
+
+.meet:hover {
+  box-shadow: 15px 15px rgb(129, 128, 128);
+}
+.bgVideo {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.tre {
+  width: 90%;
+}
+
+.carosel {
+  position: relative;
+  height: 45vw;
+  overflow: hidden;
+}
+.grafpic {
+  width: 100%;
+  position: absolute;
+  filter: brightness(60%);
+  height: 100%;
+}
+.inside {
+  position: absolute;
+  width: 70%;
+  text-align: center;
+  left: 17%;
+}
+.caroselImg {
+  margin-top: 15px;
+  width: 30%;
+  border-radius: 50%;
+}
+.inside .slide h2 {
+  margin-top: 10px;
+  color: yellow;
+  font-size: 2vw;
+}
+.inside .slide p {
+  color: rgb(230, 230, 0);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 2.2vw;
+  margin-top: 2.7vw;
+  padding: 45px;
+  border-radius: 0.25vw;
+  backdrop-filter: rgba(124, 112, 0, 0.5);
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0px 0px 5px 5px rgb(212, 211, 211);
+}
+
+.slide {
+  transition: 2s;
+  overflow: hidden;
+}
+.slide1 {
+  position: absolute;
+
+  transform: translate(0);
+}
+.slide2,
+.slide3 {
+  position: absolute;
+  transform: translate(300%);
+}
+.slide3 {
+  padding-top: 5vw;
+}
+
+.left {
+  opacity: 0;
+  transition: 4s;
+}
+
+.buttons {
+  display: flex;
+
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  top: 50%;
+}
+.buttons i {
+  color: black;
+  background-color: grey;
+  font-size: 2vw;
+  border-radius: 0.25vw;
+  padding: 15px;
+  margin: auto 10px;
+  cursor: pointer;
+}
+.buttons i:hover {
+  color: white;
+  background-color: black;
+}
+
+/*====================================================================
+                               Pheonix
+===================================================================*/
+
+.pheonix {
+  position: absolute;
+}
+.bgVidDiv {
+  width: 100%;
+
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  overflow: hidden;
+}
+.pheo video {
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+.pheoDivvyDiv {
+  position: relative;
+}
+
+.pheo .pain {
+  width: 70%;
+  height: 10%;
+}
+.pheo .subtext {
+  width: 30%;
+  font-size: 2.5vw;
+  font-family: "coolregular";
+  line-height: 4vw;
+}
+.pheo .subtext h3 {
+  font-family: "coolregular";
+  text-align: center;
+  margin: auto auto auto -2vw;
+  padding: 5px;
+  text-decoration: underline;
+}
+.pheodiv .subtext img {
+  width: 85%;
+}
+.pheo h1 {
+  width: 100%;
+  text-align: left;
+  margin: 5vw auto 3vw;
+  letter-spacing: 15px;
+  /* filter: drop-shadow(0px 0px 20px #9c0101); */
+  height: fit-content;
+}
+
+.pheo .ani4 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 8vw;
+  font-size: 3vw;
+}
+.pheo .ani5 {
+  text-align: center;
+  font-size: 6vw;
+  line-height: 10vw;
+  letter-spacing: 15px;
+}
+.headdiv {
+  padding: 3%;
+}
+.line2 {
+  margin-left: 25vw;
+}
+.line3 {
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 20vw;
+}
+.line4 {
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 35vw;
+}
+
+.pheodiv {
+  color: white;
+
+  display: flex;
+}
+.dosmas {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10vw;
+  border-color: gold;
+}
+.playstorediv {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vw auto;
+}
+.playstorediv p {
+  color: red;
+  width: 50%;
+  text-align: center;
+}
+.apple {
+  color: black;
+  background-color: white;
+  padding: 2% 15%;
+  border-radius: 0.25vw;
+  border: solid grey;
+}
+.google {
+  color: black;
+  padding: 2% 13.5%;
+  border-radius: 0.25vw;
+  background-color: white;
+  border: solid grey;
+  transition: 0.8s;
+}
+.google:hover,
+.apple:hover {
+  color: white;
+  background-color: black;
+}
+
+.pheodiv {
+  position: relative;
+  margin-top: 5vw;
+  display: flex;
+  padding: 5% 1% 1%;
+}
+/*============================
+              Bottom/Footer
+         ==========================*/
+
+.footer {
+  justify-content: space-evenly;
+  display: flex;
+  margin: 5vw auto;
+  padding: 100% auto;
+  border-top: solid rgb(221, 156, 14);
+  padding-top: 50px;
+  border-width: thick;
+  border-radius: 0.25vw;
+  width: 95%;
+}
+.bottomMenu {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5vw;
+  padding-top: 20px;
+}
+.bottomMenu div a {
+  color: white;
+  text-decoration: none;
+}
+.bottomMenu div a:hover {
+  color: yellow;
+}
+
+/*============================
+              Social Media
+ ==========================*/
+.footer {
+  margin-top: 5vw;
+}
+
+.fab {
+  width: 100%;
+  font-size: 2vw;
+}
+
+i {
+  transition: 0.8s;
+}
+.fa-facebook::before {
+  font-size: 2vw;
+}
+
+.fa-facebook {
+  color: rgb(66, 103, 178);
+
+  margin: 5%;
+  transition: 1s;
+  text-decoration: none;
+}
+.dove:hover > a i {
+  transform: rotate(360deg);
+}
+.fa-twitter {
+  color: #00acee;
+}
+.fa-instagram {
+  font-size: 2vw;
+  padding: 10%;
+  width: 120%;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  border-radius: 20%;
+}
+
+.fa-youtube {
+  color: #ff0000;
+}
+
+.faceb {
+  background: white;
+  display: inline-block;
+  background: white;
+  border-radius: 50%;
+  box-sizing: content-box;
+  list-style: none;
+}
+
+.icons {
+  display: flex;
+  flex: left;
+
+  justify-content: space-evenly;
+
+  padding-top: 1%;
+}
+.iconsBot {
+  margin-right: 10%;
+  width: 50%;
+}
+.icons a {
+  margin: auto 5%;
+}
+
+/*============================
+              Coin
+  ==========================*/
+
+#bar {
+  position: absolute;
+  border-radius: 50%;
+}
+.bar {
+  background-color: black;
+  border: solid white;
+  bottom: -10;
+  height: 100px;
+  transition: 20s;
+  border-radius: 50%;
+  width: 100px;
+  position: relative;
+  z-index: 10;
+  animation-fill-mode: forwards;
+}
+.bar img {
+  width: 100%;
+  border: solid white;
+  border-radius: 50%;
+}
+
+#bar:hover .bar {
+  transform: rotateY(5040deg);
+  border-radius: 50%;
+}
+
+.drakelink {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 1vw;
+}
+
+/*================================
+        Mobile Design
+ 320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+================================*/
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  /*========================
+              Body and Global
+          ========================*/
+  .begin {
+    display: none;
+  }
+  #bod {
+    display: block;
+  }
+  /*========================
+              Top Section/Heading
+          ========================*/
+  .blur {
+    filter: blur(2px);
+  }
+  .fix {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+    color: yellow;
+    font-size: 8vw;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+  }
+  .tit2 {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+
+    overflow: hidden;
+    display: block;
+  }
+  .body .mainheading {
+    line-height: 17vw;
+    top: 45vw;
+  }
+
+  #mobileimage {
+    display: block;
+    position: absolute;
+    width: 130%;
+    z-index: -1;
+    overflow: hidden;
+
+    filter: brightness(20%);
+    margin: 110% 10%;
+  }
+
+  .ani3 {
+    font-size: 14vw;
+    letter-spacing: 3vw;
+    filter: drop-shadow(1vw 1vw 1vw #9c8d01);
+  }
+  .conservative {
+    font-size: 5vw;
+    letter-spacing: 3vw;
+    font-family: "coolregular";
+  }
+
+  body,
+  .body,
+  #bod,
+  .bod {
+    overflow: visible;
+  }
+
+  .ani4 {
+    background: #222 -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+      ) 0 0 no-repeat;
+    -webkit-background-size: 100px;
+    color: rgba(156, 141, 1, 0.5);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine2;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    /* text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5); */
+  }
+  .ulTop {
+    flex-direction: column;
+    position: absolute;
+
+    display: block;
+    margin-left: 1px;
+    z-index: 2;
+    margin-top: 35%;
+    margin-left: 30%;
+    padding: 5.5px;
+    transform: translate(-300%);
+    transition: 0.7s;
+    height: 100%;
+  }
+  .ulTop li {
+    text-align: center;
+    background-color: black;
+    padding: 0.8px;
+  }
+  .ulTop li a {
+    position: relative;
+    display: block;
+    font-size: 10vw;
+    border: grey solid;
+    padding: 10px auto auto;
+    margin-top: 10px;
+    color: yellow;
+    background-color: black;
+  }
+  .iconsTop {
+    display: none;
+  }
+  .bod {
+    padding: 0;
+  }
+  .body {
+    padding: 0;
+  }
+  .tog {
+    transform: translate(0);
+  }
+  .fa-bars {
+    transform: rotate(0);
+  }
+  .relative {
+    position: relative;
+    z-index: 1000000000;
+    background-color: red;
+  }
+
+  .btnpadd {
+    position: relative;
+  }
+
+  .next {
+    left: -2px;
+    letter-spacing: 5px;
+  }
+
+  .rcon {
+    left: 50px;
+  }
+  .prev {
+    right: -65px;
+    letter-spacing: 5px;
+  }
+  .pcon {
+    right: 50px;
+  }
+  /*========================
+            Follow Me/VIP Tab
+          ========================*/
+  .followme,
+  .form {
+    height: 100%;
+  }
+  .followme .followp1 {
+    margin: 35vw auto;
+    font-size: 5vw;
+    line-height: 14vw;
+    padding: 2%;
+  }
+  .followp2 {
+    display: none;
+  }
+  .followYoutube {
+    display: block;
+    font-size: 35vw;
+    text-align: center;
+  }
+  .fas1,
+  .fas2 {
+    font-size: 9vw;
+  }
+  .form form {
+    margin-top: 35vw;
+    font-size: 15vw;
+
+    padding: 4%;
+    line-height: 15vw;
+  }
+  .form form .ani {
+    line-height: 10vw;
+    font-size: 5vw;
+  }
+  .form form input {
+    padding: 3%;
+    width: 100%;
+  }
+
+  /*========================
+            Middle/Body Heading Text
+          ========================*/
+  .bodytitle p {
+    margin-bottom: 4vw;
+    width: 100%;
+    letter-spacing: 1vw;
+    color: white;
+    font-size: 6vw;
+
+    line-height: 16vw;
+    padding: 1vw;
+  }
+
+  .bodytitle .goto {
+    font-size: 7vw;
+    color: yellow;
+  }
+  .bodytitle .first {
+    font-size: 10vw;
+  }
+  .bodytitle h3 {
+    font-size: 2vw;
+    font-weight: bolder;
+  }
+  .bodytitle p .hoodspan {
+    font-size: 12vw;
+  }
+  .test {
+    display: none;
+  }
+
+  /*========================
+          Video Section
+          ========================*/
+  .viddiv .latest {
+    margin-top: 25vw;
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.15);
+  }
+
+  .viddiv {
+    margin: 0;
+  }
+  .watchbtn {
+    margin: 1vw auto 30vw;
+    font-size: 5vw;
+  }
+  .dos {
+    opacity: 0;
+    margin: 0;
+  }
+  .another1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .testparent2 {
+    width: 100%;
+    margin-bottom: 4vw;
+  }
+  .viddiv .pops {
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.15);
+  }
+  /*========================
+            Carosel
+          ========================*/
+  .meet {
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.15);
+    margin-bottom: 10vw;
+  }
+  .inside .slide h2 {
+    margin: 5vw auto 15vw;
+    font-size: 4vw;
+  }
+  .inside .slide p {
+    font-size: 4vw;
+    width: 100%;
+    padding: 15px;
+    line-height: 5vw;
+    letter-spacing: 1vw;
+  }
+  .carosel {
+    height: 70vh;
+  }
+  .caroselImg {
+    width: 50%;
+  }
+  /*========================
+            Pheonix
+  ========================*/
+  .pheo .headdiv h1 {
+    font-size: 6vw;
+    line-height: 10vw;
+    text-align: center;
+  }
+  .pheo .headdiv .line2,
+  .line3,
+  .line4 {
+    text-align: center;
+    margin: 0;
+  }
+  .pheo .ani5 {
+    letter-spacing: 1vw;
+    padding: 0.3vw;
+    color: rgb(255, 7, 58);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+      0 0 20px rgb(255, 7, 58), 0 0 35px rgb(255, 7, 58),
+      0 0 40px rgb(255, 7, 58), 0 0 50px rgb(255, 7, 58),
+      0 0 75px rgb(255, 7, 58);
+    margin-top: 20vw;
+  }
+  .playstorediv {
+    margin: auto;
+  }
+  .dosmas {
+    display: none;
+  }
+
+  /*========================
+             Footer
+          ========================*/
+  .bottomMenu {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .iconsBot {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+  .dove a i {
+    font-size: 7vw;
+  }
+  .fa-facebook::before {
+    font-size: 7vw;
+  }
+  .bar {
+    display: none;
+  }
+  .footer {
+    margin: 5vw auto 7vw;
+    padding: 4vw auto 0;
+  }
+  .drakelink {
+    margin-bottom: 8vw;
+    font-size: 2vw;
+  }
+  .snowflakes {
+    display: none;
+  }
+}
+/*=============================================================================
+                                Snowflakes
+=============================================================================*/
+
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+.snowflake {
+  position: absolute;
+  top: -10%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: silver;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 30s, 7s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 30s, 7s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+.snowflake:nth-of-type(10) {
+  left: 25%;
+  -webkit-animation-delay: 2s, 0s;
+  animation-delay: 2s, 0s;
+}
+.snowflake:nth-of-type(11) {
+  left: 65%;
+  -webkit-animation-delay: 4s, 2.5s;
+  animation-delay: 4s, 2.5s;
+}
+.snowflake:nth-of-type(12) {
+  left: 1%;
+  -webkit-animation-delay: 10s, 0s;
+  animation-delay: 10s, 0s;
+}
+.snowflake:nth-of-type(13) {
+  left: 10%;
+  -webkit-animation-delay: 11s, 1s;
+  animation-delay: 11s, 1s;
+}
+.snowflake:nth-of-type(14) {
+  left: 20%;
+  -webkit-animation-delay: 13s, 0.5s;
+  animation-delay: 13s, 0.5s;
+}
+.snowflake:nth-of-type(15) {
+  left: 30%;
+  -webkit-animation-delay: 15s, 2s;
+  animation-delay: 15s, 2s;
+}
+.snowflake:nth-of-type(16) {
+  left: 40%;
+  -webkit-animation-delay: 11s, 2s;
+  animation-delay: 11s, 2s;
+}
+.snowflake:nth-of-type(17) {
+  left: 50%;
+  -webkit-animation-delay: 10s, 3s;
+  animation-delay: 10s, 3s;
+}
+.snowflake:nth-of-type(18) {
+  left: 60%;
+  -webkit-animation-delay: 12s, 2s;
+  animation-delay: 12s, 2s;
+}
+.snowflake:nth-of-type(19) {
+  left: 70%;
+  -webkit-animation-delay: 14s, 1s;
+  animation-delay: 14s, 1s;
+}
+.snowflake:nth-of-type(20) {
+  left: 80%;
+  -webkit-animation-delay: 16s, 0s;
+  animation-delay: 16s, 0s;
+}
+.snowflake:nth-of-type(21) {
+  left: 90%;
+  -webkit-animation-delay: 9s, 1.5s;
+  animation-delay: 9s, 1.5s;
+}
+.snowflake:nth-of-type(22) {
+  left: 25%;
+  -webkit-animation-delay: 10s, 0s;
+  animation-delay: 10s, 0s;
+}
+.snowflake:nth-of-type(23) {
+  left: 65%;
+  -webkit-animation-delay: 9s, 2.5s;
+  animation-delay: 9s, 2.5s;
+}
+.snowflake:nth-of-type(24) {
+  left: 30%;
+  -webkit-animation-delay: 15s, 2s;
+  animation-delay: 18s, 2s;
+}
+.snowflake:nth-of-type(25) {
+  left: 40%;
+  -webkit-animation-delay: 11s, 2s;
+  animation-delay: 20s, 2s;
+}
+.snowflake:nth-of-type(26) {
+  left: 50%;
+  -webkit-animation-delay: 10s, 3s;
+  animation-delay: 10s, 3s;
+}
+.snowflake:nth-of-type(27) {
+  left: 60%;
+  -webkit-animation-delay: 12s, 2s;
+  animation-delay: 20s, 2s;
+}
+.snowflake:nth-of-type(28) {
+  left: 70%;
+  -webkit-animation-delay: 14s, 1s;
+  animation-delay: 19s, 1s;
+}
+.snowflake:nth-of-type(29) {
+  left: 80%;
+  -webkit-animation-delay: 16s, 0s;
+  animation-delay: 17s, 0s;
+}
+.snowflake:nth-of-type(30) {
+  left: 90%;
+  -webkit-animation-delay: 9s, 1.5s;
+  animation-delay: 17s, 1.5s;
+}
+.snowflake:nth-of-type(31) {
+  left: 25%;
+  -webkit-animation-delay: 18s, 0s;
+  animation-delay: 18s, 0s;
+}
+.snowflake:nth-of-type(32) {
+  left: 65%;
+  -webkit-animation-delay: 18s, 2.2s;
+  animation-delay: 18s, 2.2s;
+}
+.snowflake:nth-of-type(33) {
+  left: 65%;
+  -webkit-animation-delay: 22s, 2.7s;
+  animation-delay: 22s, 2.7s;
+}
+.snowflake:nth-of-type(34) {
+  left: 65%;
+  -webkit-animation-delay: 24s, 2.5s;
+  animation-delay: 24s, 2.5s;
+}
+.snowflake:nth-of-type(35) {
+  left: 65%;
+  -webkit-animation-delay: 21s, 2.5s;
+  animation-delay: 21s, 2.5s;
+}
+.snowflake:nth-of-type(36) {
+  left: 45%;
+  -webkit-animation-delay: 22s, 2.8s;
+  animation-delay: 22s, 2.8s;
+}
+.snowflake:nth-of-type(37) {
+  left: 15%;
+  -webkit-animation-delay: 24s, 1.3s;
+  animation-delay: 24s, 1.3s;
+}
+.snowflake:nth-of-type(38) {
+  left: 25%;
+  -webkit-animation-delay: 25s, 2.5s;
+  animation-delay: 25s, 2.5s;
+}
+.snowflake:nth-of-type(39) {
+  left: 85%;
+  -webkit-animation-delay: 27s, 2.8s;
+  animation-delay: 27s, 2.8s;
+}
+.snowflake:nth-of-type(40) {
+  left: 32%;
+  -webkit-animation-delay: 29s, 2.7s;
+  animation-delay: 29s, 2.7s;
+}
+.snowflake:nth-of-type(41) {
+  left: 72%;
+  -webkit-animation-delay: 26s, 1.5s;
+  animation-delay: 26s, 1.5s;
+}
+.snowflake:nth-of-type(42) {
+  left: 12%;
+  -webkit-animation-delay: 27.5s, 2.5s;
+  animation-delay: 27.5s, 2.5s;
+}
+.snowflake:nth-of-type(43) {
+  left: 5%;
+  -webkit-animation-delay: 27s, 2.55s;
+  animation-delay: 27s, 2.55s;
+}
+.snowflake:nth-of-type(44) {
+  left: 15%;
+  -webkit-animation-delay: 25.5s, 2.2s;
+  animation-delay: 25.5s, 2.2s;
+}
+.snowflake:nth-of-type(45) {
+  left: 55%;
+  -webkit-animation-delay: 29s, 2.5s;
+  animation-delay: 29s, 2.5s;
+}
+.snowflake:nth-of-type(46) {
+  left: 12%;
+  -webkit-animation-delay: 26s, 2.5s;
+  animation-delay: 22s, 2.5s;
+}
+.snowflake:nth-of-type(47) {
+  left: 18%;
+  -webkit-animation-delay: 27s, 6.5s;
+  animation-delay: 24s, 6.5s;
+}
+.snowflake:nth-of-type(48) {
+  left: 2%;
+  -webkit-animation-delay: 27s, 3.5s;
+  animation-delay: 27s, 3.5s;
+}
+.snowflake:nth-of-type(49) {
+  left: 22%;
+  -webkit-animation-delay: 25s, 4.5s;
+  animation-delay: 25s, 4.5s;
+}
+.snowflake:nth-of-type(50) {
+  left: 8%;
+  -webkit-animation-delay: 29s, 1.5s;
+  animation-delay: 29s, 1.5s;
+}
