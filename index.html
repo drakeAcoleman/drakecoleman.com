@@ -1,9 +1,540 @@
-@keyframes chase {
-  0% {
-    left: -10%;
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="public/images/newlogo.jpg" />
+    <title>The Open Road</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script
+      src="https://kit.fontawesome.com/ef93314a2f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  100% {
-    left: 110%;
-  }
-}
+  <body class="body">
+    <div class="header">
+      <div class="title">The Open Road</div>
+      <div class="container">
+        <div class="header-bar">
+          <ul class="slider-menu">
+            <div class="box">
+              <form name="search">
+                <input
+                  type="text"
+                  class="input"
+                  name="txt"
+                  onmouseout="this.value = ''; this.blur();"
+                />
+              </form>
+              <i class="fas fa-search"></i>
+            </div>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+          </ul>
+        </div>
+      </div>
+      <div class="headerSideOptions">
+        <a href="#">Log In </a>
+
+        <a href="#">Messages</a>
+      </div>
+    </div>
+    <div class="navBar">
+        <img src="Assets/images (1).png" class="police police2">
+         <img src="Assets/transparent-background-police-car-11549453541rrzio4mc0v copy.png" class="police">
+      <section>
+        <nav>
+          <ul class="menuItems">
+            <li><a href="#" data-item="Fraud">Fraud</a></li>
+            <div class="vl"></div>
+
+            <li><a href="#" data-item="Hacking">Hacking</a></li>
+            <div class="vl"></div>
+            <li><a href="#" data-item="Malware">Malware</a></li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Drugs & Chemicals">Drugs & Chemicals</a>
+            </li>
+            <div class="vl"></div>
+            <li><a href="#" data-item="Services">Services</a></li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Security & Hosting">Security & Hosting</a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Guides & Tutorials">Guides & Tutorials</a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Software">Software</a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Digital Items">Digital Items</a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Counterfeit">Counterfeit</a>
+            </li>
+            <div class="vl"></div>
+
+            <li>
+              <a href="#" data-item="Carded Items">Carded Items</a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Legitimate ">Legitimate </a>
+            </li>
+            <div class="vl"></div>
+            <li>
+              <a href="#" data-item="Other">Other</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <div class="firstSection">
+      <div class="container4">
+        <div class="card3">
+          <h3 class="cardtitle">Public Profile</h3>
+          <div class="profileDeets">
+            <div>
+              <p class="halfFirst">Name</p>
+              <p class="halfSecond">Jake</p>
+            </div>
+            <div>
+              <p class="halfFirst">Joined</p>
+              <p class="halfSecond">January 11th, 2022</p>
+            </div>
+            <div>
+              <p class="halfFirst">Last Login</p>
+              <p class="halfSecond">May 22, 2022</p>
+            </div>
+            <div>
+              <p class="halfFirst">Total Orders</p>
+              <p class="halfSecond">$23,000</p>
+            </div>
+            <div>
+              <p class="halfFirst">Wanted Level</p>
+              <p class="halfSecond star">*****</p>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+        </div>
+      </div>
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <h1>Hello</h1>
+            <p>This is where I would put news/Whatever you want</p>
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4" class="carousel__prev"></a>
+              <a href="#carousel__slide2" class="carousel__next"></a>
+            </div>
+          </li>
+          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <h1>slide 2</h1>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1" class="carousel__prev"></a>
+            <a href="#carousel__slide3" class="carousel__next"></a>
+          </li>
+          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <h1>slide 3</h1>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2" class="carousel__prev"></a>
+            <a href="#carousel__slide4" class="carousel__next"></a>
+          </li>
+          <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+            <h1>slide 4</h1>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3" class="carousel__prev"></a>
+            <a href="#carousel__slide1" class="carousel__next"></a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a
+                href="#carousel__slide1"
+                class="carousel__navigation-button"
+              ></a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a
+                href="#carousel__slide2"
+                class="carousel__navigation-button"
+              ></a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a
+                href="#carousel__slide3"
+                class="carousel__navigation-button"
+              ></a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a
+                href="#carousel__slide4"
+                class="carousel__navigation-button"
+              ></a>
+            </li>
+          </ol>
+        </aside>
+      </section>
+      <div class="container4">
+        <div class="card3">
+          <h3 class="cardtitle">Exchange Rates</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondSection">
+      <div class="container2">
+        <h1>Vendor Spotlight</h1>
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"></span>
+              <h2 class="java">Java</h2>
+              <p class="java">
+                Java is a class-based, object-oriented programming language that
+                is designed to have as few implementation dependencies as
+                possible.
+              </p>
+            </div>
+          </div>
+          <div class="face face2">
+            <img
+              class="image1"
+              src="https://i.pinimg.com/474x/5a/1d/f8/5a1df86bc476ea7ce25cbb651148c450.jpg"
+            />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"></span>
+              <h2 class="python">Python</h2>
+              <p class="python">
+                Python is an interpreted, high-level and general-purpose
+                programming language.
+              </p>
+            </div>
+          </div>
+          <div class="face face2">
+            <img
+              class="image1"
+              src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F01%2Fgta-v-franklin-lamar-voice-actors-recreate-haircut-scene-000.jpg?w=960&cbr=1&q=90&fit=max"
+            />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"></span>
+              <h2 class="cSharp">C#</h2>
+              <p class="cSharp">
+                C# is a general-purpose, multi-paradigm programming language
+                encompassing static typing, strong typing, lexically scoped and
+                component-oriented programming disciplines.
+              </p>
+            </div>
+          </div>
+          <div class="face face2">
+            <img
+              class="image1"
+              src="https://wallpapercave.com/wp/wp9723608.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="thirdSection">
+      <div class="container3">
+        <div class="card2">
+          <div class="imgBx">
+            <img src="https://img.gta5-mods.com/q75-w350-h233-cfill/images/the-purple-dildo-gta-sa/e6f4bc-d22s.png" />
+          </div>
+          <div class="contentBx">
+            <h2>Actual Game Used Dildo Katana</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>1</span>
+             
+            </div>
+            <div class="color">
+              <h3>Price</h3>
+            
+              <span>$1,000,000</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://www.dea.gov/sites/default/files/styles/slide/public/2018-07/crack_cocaine6.jpg?itok=dDIHkiuX"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>Pure Colombian Cocaine</h2>
+            <div class="size">
+              <h3>Weight :</h3>
+              <span>7g</span>
+              <span>14g</span>
+              <span>28g</span>
+              <span>56g</span>
+            </div>
+            <div class="color">
+              <h3>Vendy McvendFace</h3>
+              <span>$30</span>
+              <span>$60</span>
+              <span>$120</span>
+              <span>$240</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2019/03/california-marijuana-surplus-classen-rafael-getty-1068x713.jpg"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>Northern Lights</h2>
+            <div class="size">
+              <h3>Weight</h3>
+              <span>7g</span>
+              <span>14g</span>
+              <span>28g</span>
+              <span>56g</span>
+            </div>
+            <div class="color">
+              <h3>Price</h3>
+              <span>$30</span>
+              <span>$60</span>
+              <span>$120</span>
+              <span>$240</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9FncaE4wPVFhTd14Lx8joXr4GeoqqEgu8JBNaZF3y-re-byb87ZOg2C9wGQqIofvpDi4&usqp=CAU"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>Ecstasy</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>20</span>
+              <span>100</span>
+              <span>500</span>
+              <span>1000</span>
+            </div>
+            <div class="color">
+              <h3>Price</h3>
+              <span>$30</span>
+              <span>$60</span>
+              <span>$120</span>
+              <span>$240</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://edm.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTYwMDI1ODg2MTAyMzk4OTUz/mdma.png"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>MDMA</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>20</span>
+              <span>100</span>
+              <span>500</span>
+              <span>1000</span>
+            </div>
+            <div class="color">
+              <h3>VendyMcVendFace</h3>
+              <span>$30</span>
+              <span>$60</span>
+              <span>$120</span>
+              <span>$240</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://seeklogo.com/images/K/kfc-new-logo-72E6348046-seeklogo.com.png"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>KFC Login's</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>10</span>
+              <span>20</span>
+              <span>30</span>
+              <span>50</span>
+            </div>
+            <div class="color">
+              <h3>VendyMcVendFace</h3>
+              <span>$5</span>
+              <span>$10</span>
+              <span>$15</span>
+              <span>$20</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://www.foodbusinessnews.net/ext/resources/2021/7/SubwaySteakCaliClub_Lead.jpg?t=1625668434&width=900"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>Subway Login's</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>10</span>
+              <span>20</span>
+              <span>30</span>
+              <span>50</span>
+            </div>
+            <div class="color">
+              <h3>VendyMcVendFace</h3>
+              <span>$5</span>
+              <span>$10</span>
+              <span>$15</span>
+              <span>$20</span>
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="imgBx">
+            <img
+              src="https://www.gardencourtantiques.com/wp-content/uploads/2019/09/vintage-secret-compartment-book-box-old-prague-1935-garden-court-antiques-004.jpg"
+            />
+          </div>
+          <div class="contentBx">
+            <h2>Trap Guide</h2>
+            <div class="size">
+              <h3>Amount</h3>
+              <span>1</span>
+             
+            </div>
+            <div class="color">
+              <h3>VendyMcVendFace</h3>
+              
+              <span>$10</span>
+              
+            </div>
+            <a href="#">Buy Now</a>
+          </div>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerDiv">
+      <div class="footer">
+        <div id="button"></div>
+        <div id="container">
+          <div id="cont">
+            <div class="footer_center">
+              <!-- FOOTER START -->
+              <div class="footer2">
+                <div class="contain">
+                  <div class="col">
+                    <h1>Account</h1>
+                    <ul>
+                      <li>Account Setting</li>
+                      <li>Site Theme Settings</li>
+                      <li>Change Password</li>
+                      <li>Change/Reset Pin</li>
+                      <li>Public PGP/Enable 2FA</li>
+                      <li>Referrals</li>
+                      <li>Wallet/Balance</li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h1>Profile</h1>
+                    <ul>
+                      <li>Profile Privacy</li>
+                      <li>Conversations(PM)</li>
+                      <li>Dispute Conversations</li>
+                      <li>Create Conversation</li>
+                      <li>Favorite Vendors</li>
+                      <li>Watching Listings/Vendors</li>
+                      <li>Blocked Vendors</li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h1>Orders</h1>
+                    <ul>
+                      <li>My Orders</li>
+                      <li>Listings</li>
+                      <li>My Autoshop Orders</li>
+                      <li>Data Autoshop</li>
+                      <li>Buyer Statistics</li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h1>Support</h1>
+                    <ul>
+                      <li>FAQ</li>
+                      <li>Support Center</li>
+                      <li>Tickets</li>
+                      <li>Create Ticket</li>
+
+                      <li>How-To Guides</li>
+                      <li>News/Blog</li>
+                      <li>Forum</li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <h1>Misc</h1>
+                    <ul>
+                      <li>About The Open Road</li>
+                      <li>Contact us</li>
+                      <li>Rules/Terms of Services</li>
+                      <li>My reports</li>
+                    </ul>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <!-- END OF FOOTER -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
