@@ -1,2 +1,0 @@
-# hood
-Hood Conservative Site
